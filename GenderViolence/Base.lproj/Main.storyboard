@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GenderViolence" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imk-5e-TS9">
+                                <rect key="frame" x="213" y="285" width="175" height="30"/>
+                                <state key="normal" title="Check Violence Reported">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRc-of-v5V">
+                                <rect key="frame" x="246" y="211" width="109" height="30"/>
+                                <state key="normal" title="Report Violence">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6Ql-H8-y8I" kind="show" id="vW6-c7-N7M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="lRc-of-v5V" secondAttribute="centerX" constant="-0.5" id="AbY-ac-KJX"/>
+                            <constraint firstAttribute="centerX" secondItem="Imk-5e-TS9" secondAttribute="centerX" constant="-0.5" id="NNU-dI-dlN"/>
+                            <constraint firstAttribute="centerY" secondItem="Imk-5e-TS9" secondAttribute="centerY" id="XqD-yT-c4O"/>
+                            <constraint firstAttribute="centerY" secondItem="lRc-of-v5V" secondAttribute="centerY" constant="74" id="rdS-NV-MWK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Report Violence-->
+        <scene sceneID="cgH-al-mQ7">
+            <objects>
+                <viewController title="Report Violence" id="6Ql-H8-y8I" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X6E-3P-2Ze"/>
+                        <viewControllerLayoutGuide type="bottom" id="LWa-hO-px3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PWp-NY-Wie">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Type of Violence" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWP-s6-8ow">
+                                <rect key="frame" x="22" y="77" width="562" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8i-pF-PQs">
+                                <rect key="frame" x="22.5" y="157.5" width="63.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Street" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sg4-6D-63K">
+                                <rect key="frame" x="22" y="262" width="406" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Gej-6U-01j">
+                                <rect key="frame" x="22" y="340" width="73" height="29"/>
+                                <segments>
+                                    <segment title="Yes"/>
+                                    <segment title="No"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Other important information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlV-KF-oK9">
+                                <rect key="frame" x="22" y="384" width="213" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLp-oa-kbF">
+                                <rect key="frame" x="240" y="528.5" width="109" height="30"/>
+                                <state key="normal" title="Report Violence">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I9f-Q5-KN7">
+                                <rect key="frame" x="22" y="412" width="531" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IpR-kh-NgD">
+                                <rect key="frame" x="456" y="262" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="utr-yR-Jwa">
+                                <rect key="frame" x="22" y="220" width="163" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Awu-1e-7yD">
+                                <rect key="frame" x="203" y="220" width="146" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4wi-HA-Xca">
+                                <rect key="frame" x="384" y="220" width="169" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mW-3x-MwO">
+                                <rect key="frame" x="22" y="182" width="141" height="30"/>
+                                <state key="normal" title="Get Current Address">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Does attacker have a gun?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ked-TE-NIk">
+                                <rect key="frame" x="22" y="305" width="205.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lw2-hV-eKy">
+                                <rect key="frame" x="22" y="114" width="231" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Awu-1e-7yD" firstAttribute="leading" secondItem="utr-yR-Jwa" secondAttribute="trailing" constant="18" id="8sn-BM-Lld"/>
+                            <constraint firstItem="4wi-HA-Xca" firstAttribute="leading" secondItem="Awu-1e-7yD" secondAttribute="trailing" constant="35" id="9b7-bV-AKG"/>
+                            <constraint firstItem="utr-yR-Jwa" firstAttribute="leading" secondItem="PWp-NY-Wie" secondAttribute="leadingMargin" constant="6" id="Bp9-nu-Wtp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IpR-kh-NgD" secondAttribute="trailing" constant="31" id="F7t-76-fzx"/>
+                            <constraint firstAttribute="centerY" secondItem="wLp-oa-kbF" secondAttribute="centerY" constant="-193" id="JK3-si-psx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4wi-HA-Xca" secondAttribute="trailing" constant="31" id="KLb-FP-zsb"/>
+                            <constraint firstItem="7mW-3x-MwO" firstAttribute="leading" secondItem="PWp-NY-Wie" secondAttribute="leadingMargin" constant="6" id="NNn-83-zwP"/>
+                            <constraint firstAttribute="centerX" secondItem="wLp-oa-kbF" secondAttribute="centerX" constant="-0.5" id="RAc-Yu-Kgi"/>
+                            <constraint firstItem="IpR-kh-NgD" firstAttribute="leading" secondItem="sg4-6D-63K" secondAttribute="trailing" constant="28" id="a2t-C6-gio"/>
+                            <constraint firstItem="qWP-s6-8ow" firstAttribute="leading" secondItem="PWp-NY-Wie" secondAttribute="leadingMargin" constant="6" id="b60-LQ-9Eq"/>
+                            <constraint firstItem="utr-yR-Jwa" firstAttribute="top" secondItem="7mW-3x-MwO" secondAttribute="bottom" constant="8" id="o0V-DU-8hS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="I9f-Q5-KN7" secondAttribute="trailing" constant="31" id="pnm-02-uTS"/>
+                            <constraint firstItem="7mW-3x-MwO" firstAttribute="top" secondItem="g8i-pF-PQs" secondAttribute="bottom" constant="4" id="t1i-1u-NcK"/>
+                            <constraint firstItem="sg4-6D-63K" firstAttribute="top" secondItem="utr-yR-Jwa" secondAttribute="bottom" constant="12" id="vuf-B8-nA1"/>
+                            <constraint firstItem="sg4-6D-63K" firstAttribute="leading" secondItem="PWp-NY-Wie" secondAttribute="leadingMargin" constant="6" id="xZ7-LW-jEz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zkb-A6-DBg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1098" y="-165"/>
+        </scene>
+    </scenes>
+</document>
