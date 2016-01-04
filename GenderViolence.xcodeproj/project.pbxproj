@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B859C071C39F77500AEA029 /* RepViolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B859C061C39F77500AEA029 /* RepViolViewController.swift */; };
 		0BA2DCAF1C32142F0094A5F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA2DCAE1C32142F0094A5F9 /* AppDelegate.swift */; };
 		0BA2DCB11C32142F0094A5F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA2DCB01C32142F0094A5F9 /* ViewController.swift */; };
 		0BA2DCB41C32142F0094A5F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BA2DCB21C32142F0094A5F9 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B859C061C39F77500AEA029 /* RepViolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepViolViewController.swift; sourceTree = "<group>"; };
 		0BA2DCA91C32142F0094A5F9 /* GenderViolence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenderViolence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA2DCAD1C32142F0094A5F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BA2DCAE1C32142F0094A5F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				0BA2DCB51C32142F0094A5F9 /* Images.xcassets */,
 				0BA2DCB71C32142F0094A5F9 /* LaunchScreen.xib */,
 				0BA2DCAC1C32142F0094A5F9 /* Supporting Files */,
+				0B859C061C39F77500AEA029 /* RepViolViewController.swift */,
 			);
 			path = GenderViolence;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			files = (
 				0BA2DCB11C32142F0094A5F9 /* ViewController.swift in Sources */,
 				0BA2DCAF1C32142F0094A5F9 /* AppDelegate.swift in Sources */,
+				0B859C071C39F77500AEA029 /* RepViolViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +415,7 @@
 				0BA2DCCA1C32142F0094A5F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0BA2DCCB1C32142F0094A5F9 /* Build configuration list for PBXNativeTarget "GenderViolenceTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				0BA2DCCD1C32142F0094A5F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
