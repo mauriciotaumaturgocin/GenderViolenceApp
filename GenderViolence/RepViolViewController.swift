@@ -12,9 +12,10 @@ class RepViolViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var pickerViolenceType: UIPickerView!
     
+    @IBOutlet weak var pickerViolenceFrequency: UIPickerView!
     
     var pickerViolenceTypeData: [String] = [String]()
-    
+    var pickerFrequencyData: [String] = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,11 @@ class RepViolViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         self.pickerViolenceType.delegate = self
         self.pickerViolenceType.dataSource = self
         
+        self.pickerViolenceFrequency.delegate = self
+        self.pickerViolenceFrequency.dataSource = self
+        
         pickerViolenceTypeData = ["Man", "Woman", "Transgender"]
+        pickerFrequencyData = ["First time", "2 to 4 times a week", "5 or more times a week"]
         
     }
     
@@ -39,11 +44,17 @@ class RepViolViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     // The number of rows of data
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if(pickerView.tag == 1){
+            pickerFrequencyData.count
+        }
         return pickerViolenceTypeData.count
     }
     
     // The data to return for the row and component (column) that's being passed in
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if(pickerView.tag == 1){
+            return pickerFrequencyData[row]
+        }
         return pickerViolenceTypeData[row]
     }
     
