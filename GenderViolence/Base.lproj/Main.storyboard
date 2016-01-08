@@ -79,7 +79,11 @@
                                                         <segue destination="BYZ-38-t0r" kind="show" id="vjX-H4-Rjm"/>
                                                     </connections>
                                                 </barButtonItem>
-                                                <barButtonItem key="rightBarButtonItem" title="Report" id="Sqw-fI-6E4"/>
+                                                <barButtonItem key="rightBarButtonItem" title="Report" id="Sqw-fI-6E4">
+                                                    <connections>
+                                                        <action selector="reportClicked:" destination="6Ql-H8-y8I" id="PBa-U2-qKG"/>
+                                                    </connections>
+                                                </barButtonItem>
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
@@ -235,8 +239,15 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1000"/>
                     <connections>
+                        <outlet property="cityTextField" destination="Awu-1e-7yD" id="1QR-vN-AV6"/>
+                        <outlet property="isDomesticViolenceSegControl" destination="fo5-ot-u9A" id="suk-ds-cE2"/>
+                        <outlet property="isVictimSegControl" destination="OSF-75-Toy" id="dMN-nB-47O"/>
                         <outlet property="pickerViolenceFrequency" destination="76m-9W-Mxy" id="ZPm-As-9gJ"/>
                         <outlet property="pickerViolenceType" destination="umf-92-tjr" id="0SB-P1-5G7"/>
+                        <outlet property="stateTextField" destination="4wi-HA-Xca" id="otY-hZ-IO0"/>
+                        <outlet property="streetTextField" destination="sg4-6D-63K" id="Xk2-d7-6IW"/>
+                        <outlet property="violenceTypeSegControl" destination="Gej-6U-01j" id="9JR-8p-DPp"/>
+                        <outlet property="zipCodeTextField" destination="utr-yR-Jwa" id="vh5-to-cZc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zkb-A6-DBg" userLabel="First Responder" sceneMemberID="firstResponder"/>
