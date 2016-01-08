@@ -14,8 +14,8 @@
 		0BA2DCB61C32142F0094A5F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BA2DCB51C32142F0094A5F9 /* Images.xcassets */; };
 		0BA2DCB91C32142F0094A5F9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA2DCB71C32142F0094A5F9 /* LaunchScreen.xib */; };
 		0BA2DCC51C32142F0094A5F9 /* GenderViolenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA2DCC41C32142F0094A5F9 /* GenderViolenceTests.swift */; };
-		CEA6B36E1C3F6A9400312307 /* btnok.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA6B36D1C3F6A9400312307 /* btnok.png */; };
 		CEA6B3721C3F6BD700312307 /* CurrentLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = CEA6B3711C3F6BD700312307 /* CurrentLocation.gpx */; };
+		CEA6B3741C407FDD00312307 /* btnok.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA6B3731C407FDD00312307 /* btnok.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +40,8 @@
 		0BA2DCBE1C32142F0094A5F9 /* GenderViolenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenderViolenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA2DCC31C32142F0094A5F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BA2DCC41C32142F0094A5F9 /* GenderViolenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViolenceTests.swift; sourceTree = "<group>"; };
-		CEA6B36D1C3F6A9400312307 /* btnok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btnok.png; path = ../../Desktop/btnok.png; sourceTree = "<group>"; };
 		CEA6B3711C3F6BD700312307 /* CurrentLocation.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CurrentLocation.gpx; sourceTree = "<group>"; };
+		CEA6B3731C407FDD00312307 /* btnok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btnok.png; path = GenderViolence/btnok.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +65,8 @@
 		0BA2DCA01C32142F0094A5F9 = {
 			isa = PBXGroup;
 			children = (
+				CEA6B3731C407FDD00312307 /* btnok.png */,
 				CEA6B3711C3F6BD700312307 /* CurrentLocation.gpx */,
-				CEA6B36D1C3F6A9400312307 /* btnok.png */,
 				0BA2DCAB1C32142F0094A5F9 /* GenderViolence */,
 				0BA2DCC11C32142F0094A5F9 /* GenderViolenceTests */,
 				0BA2DCAA1C32142F0094A5F9 /* Products */,
@@ -204,8 +204,8 @@
 				CEA6B3721C3F6BD700312307 /* CurrentLocation.gpx in Resources */,
 				0BA2DCB41C32142F0094A5F9 /* Main.storyboard in Resources */,
 				0BA2DCB91C32142F0094A5F9 /* LaunchScreen.xib in Resources */,
-				CEA6B36E1C3F6A9400312307 /* btnok.png in Resources */,
 				0BA2DCB61C32142F0094A5F9 /* Images.xcassets in Resources */,
+				CEA6B3741C407FDD00312307 /* btnok.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
