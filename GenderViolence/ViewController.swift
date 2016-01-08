@@ -7,17 +7,58 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, CLLocationManagerDelegate {
+    
+    @IBOutlet weak var mapView: MKMapView!
+    
+    let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        centerMapOnLocation()
+        
+        // Ask for Authorisation from the User.
+        self.locationManager.requestAlwaysAuthorization()
+        
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    let regionRadius: CLLocationDistance = 1000
+    
+    func centerMapOnLocation() {
+        
+        let currentLocation = CLLocation(latitude: -8.055474, longitude: -34.951216)
+        
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(currentLocation.coordinate,
+            regionRadius * 2.0, regionRadius * 2.0)
+        
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        var locValue:CLLocationCoordinate2D = manager.location.coordinate
+        //print("locations = \(locValue.latitude) \(locValue.longitude)")
+        let currentLocation = CLLocation(latitude: locValue.latitude, longitude: locValue.longitude)
+        
+    }
+    
+    @IBAction func onRefreshClick(sender: AnyObject) {
+        
+        centerMapOnLocation()
+        var btn_refresh: UIButton = sender as UIButton;
+        
     }
 
 
