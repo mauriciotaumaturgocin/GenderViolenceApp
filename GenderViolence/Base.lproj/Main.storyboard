@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -14,25 +15,31 @@
                         <viewControllerLayoutGuide type="bottom" id="dKp-sq-Zb9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRc-of-v5V">
-                                <rect key="frame" x="106" y="195" width="109" height="30"/>
-                                <state key="normal" title="Report Violence">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QXB-ok-SwU">
+                                <rect key="frame" x="-140" y="-216" width="600" height="1000"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6V-Il-0Kz">
+                                <rect key="frame" x="25" y="495" width="55" height="53"/>
+                                <state key="normal" image="btnok.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="6Ql-H8-y8I" kind="presentation" id="vW6-c7-N7M"/>
+                                    <action selector="onRefreshClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QQV-3K-2LE"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="QXB-ok-SwU" id="1LQ-2m-gaT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="120" y="-109.99999999999999"/>
+            <point key="canvasLocation" x="-126" y="-239"/>
         </scene>
         <!--Report Violence-->
         <scene sceneID="cgH-al-mQ7">
@@ -76,7 +83,7 @@
                                                 <barButtonItem key="backBarButtonItem" title="Cancel" id="f3Y-BA-9Ho"/>
                                                 <barButtonItem key="leftBarButtonItem" title="Cancel" id="FrL-lk-wiS">
                                                     <connections>
-                                                        <segue destination="BYZ-38-t0r" kind="show" id="vjX-H4-Rjm"/>
+                                                        <segue destination="BYZ-38-t0r" kind="modal" id="vjX-H4-Rjm"/>
                                                     </connections>
                                                 </barButtonItem>
                                                 <barButtonItem key="rightBarButtonItem" title="Report" id="Sqw-fI-6E4">
@@ -252,7 +259,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zkb-A6-DBg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="-43"/>
+            <point key="canvasLocation" x="481.06666666666666" y="-40.706666666666663"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btnok.png" width="55" height="53"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
