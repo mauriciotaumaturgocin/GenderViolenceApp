@@ -10,7 +10,6 @@ import UIKit
 
 class RepViolViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    
     @IBOutlet weak var zipCodeTextField: UITextField!
     
     @IBOutlet weak var stateTextField: UITextField!
@@ -32,19 +31,48 @@ class RepViolViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     var pickerViolenceTypeData: [String] = [String]()
     var pickerFrequencyData: [String] = [String]()
     
+    var reportViolence = ReportViolence()
+    
+    var databasePath = NSString()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        
-        self.pickerViolenceType.delegate = self
-        self.pickerViolenceType.dataSource = self
-        
-        self.pickerViolenceFrequency.delegate = self
-        self.pickerViolenceFrequency.dataSource = self
-        
+        //Creating PickerView options
         pickerViolenceTypeData = ["Man", "Woman", "Transgender"]
         pickerFrequencyData = ["First time", "2 to 4 times a week", "5 or more times a week"]
         
+        //Doing something with PickerView
+        self.pickerViolenceType.delegate = self
+        self.pickerViolenceType.dataSource = self
+        self.pickerViolenceFrequency.delegate = self
+        self.pickerViolenceFrequency.dataSource = self
+        
+        createDatabaseAndTable()
+        
+    }
+    
+    func createDatabaseAndTable(){
+        //Creating database file and table
+        let filemgr = NSFileManager.defaultManager()
+        let dirPaths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let docsDir = dirPaths[0] as! String
+        databasePath = docsDir.stringByAppendingPathComponent("reports.db")
+        if !filemgr.fileExistsAtPath(databasePath as String) {
+            let reportsDB = FMDatabase(path: databasePath as String)
+            if reportsDB == nil {
+                println("Error: \(reportsDB.lastErrorMessage())")
+            }
+            if reportsDB.open() {
+                let sql_stmt = "CREATE TABLE IF NOT EXISTS REPORTS (ID INTEGER PRIMARY KEY AUTOINCREMENT, ZIPCODE TEXT, STATE TEXT, CITY TEXT, STREET TEXT, VIOLENCE_TYPE TEXT, IS_VICTIM TEXT, IS_DOMESTIC_VIOLENCE TEXT, GENDER_VICTIM TEXT, VIOLENCE_FREQUENCY TEXT)"
+                if !reportsDB.executeStatements(sql_stmt) {
+                    println("Error: \(reportsDB.lastErrorMessage())")
+                }
+                reportsDB.close()
+            } else {
+                println("Error: \(reportsDB.lastErrorMessage())")
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -81,26 +109,47 @@ class RepViolViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBAction func reportClicked(sender: AnyObject) {
         
-        var defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        
-        defaults.setObject(self.zipCodeTextField.text, forKey: "zipCode")
-        defaults.setObject(self.cityTextField.text, forKey: "city")
-        defaults.setObject(self.stateTextField.text, forKey: "state")
-        defaults.setObject(self.streetTextField.text, forKey: "street")
-        defaults.setObject(violenceTypeSegControl.titleForSegmentAtIndex(isVictimSegControl.selectedSegmentIndex), forKey: "violenceType")
-        defaults.setObject(isVictimSegControl.titleForSegmentAtIndex(isVictimSegControl.selectedSegmentIndex), forKey: "isVictim")
-        defaults.setObject(isDomesticViolenceSegControl.titleForSegmentAtIndex(isDomesticViolenceSegControl.selectedSegmentIndex), forKey: "isDomesticViolence")
+        reportViolence.zipCode = self.zipCodeTextField.text
+        reportViolence.state = self.stateTextField.text
+        reportViolence.city = self.cityTextField.text
+        reportViolence.street = self.streetTextField.text
+        reportViolence.violenceType = violenceTypeSegControl.titleForSegmentAtIndex(violenceTypeSegControl.selectedSegmentIndex)!
+        reportViolence.isVictim = isVictimSegControl.titleForSegmentAtIndex(isVictimSegControl.selectedSegmentIndex)!
+        reportViolence.isDomesticViolence = isDomesticViolenceSegControl.titleForSegmentAtIndex(isDomesticViolenceSegControl.selectedSegmentIndex)!
         
         var text = pickerViolenceTypeData[pickerViolenceType.selectedRowInComponent(0)]
         
-        defaults.setObject(text, forKey: "violenceGender")
-        defaults.setObject(pickerFrequencyData[pickerViolenceFrequency.selectedRowInComponent(0)], forKey: "violenceFrequency")
+        reportViolence.violenceGender = text
+        reportViolence.violenceFrequency = pickerFrequencyData[pickerViolenceFrequency.selectedRowInComponent(0)]
         
+        insertIntoTable(reportViolence)
         
-        defaults.synchronize()
+        //print(reportViolence.zipCode)
+        //print(reportViolence.violenceType)
+    }
+    
+    func insertIntoTable(report: ReportViolence){
+        let reportsDB = FMDatabase(path: databasePath as String)
+        var status = "null"
         
-        print(text)
-        print("saved")
+        if reportsDB.open() {
+            
+            let insertSQL = "INSERT INTO REPORTS (ZIPCODE, STATE, CITY, STREET, VIOLENCE_TYPE, IS_VICTIM, IS_DOMESTIC_VIOLENCE, GENDER_VICTIM, VIOLENCE_FREQUENCY) VALUES ('\(report.zipCode)', '\(report.state)', '\(report.city)', '\(report.street)', '\(report.violenceType)', '\(report.isVictim)', '\(report.isDomesticViolence)', '\(report.violenceGender)', '\(report.violenceFrequency)')"
+            
+            let result = reportsDB.executeUpdate(insertSQL,
+                withArgumentsInArray: nil)
+            
+            if !result {
+                status = "Failed to add report"
+                println("Error: \(reportsDB.lastErrorMessage())")
+            } else {
+                status = "Violence Reported"
+            }
+        } else {
+            println("Error: \(reportsDB.lastErrorMessage())")
+        }
+        
+        print(status)
     }
     
     

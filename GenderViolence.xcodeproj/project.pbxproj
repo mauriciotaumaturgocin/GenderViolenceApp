@@ -14,6 +14,13 @@
 		0BA2DCB61C32142F0094A5F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BA2DCB51C32142F0094A5F9 /* Images.xcassets */; };
 		0BA2DCB91C32142F0094A5F9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA2DCB71C32142F0094A5F9 /* LaunchScreen.xib */; };
 		0BA2DCC51C32142F0094A5F9 /* GenderViolenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA2DCC41C32142F0094A5F9 /* GenderViolenceTests.swift */; };
+		0BC4F3461C40940F009C3C15 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC4F3451C40940F009C3C15 /* libsqlite3.dylib */; settings = {ATTRIBUTES = (Required, ); }; };
+		0BC4F3531C409576009C3C15 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC4F34A1C409576009C3C15 /* FMDatabase.m */; };
+		0BC4F3541C409576009C3C15 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC4F34C1C409576009C3C15 /* FMResultSet.m */; };
+		0BC4F3551C409576009C3C15 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC4F34E1C409576009C3C15 /* FMDatabaseQueue.m */; };
+		0BC4F3561C409576009C3C15 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC4F3501C409576009C3C15 /* FMDatabaseAdditions.m */; };
+		0BC4F3571C409576009C3C15 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC4F3521C409576009C3C15 /* FMDatabasePool.m */; };
+		0BC4F35C1C409EBE009C3C15 /* ReportViolence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC4F35B1C409EBE009C3C15 /* ReportViolence.swift */; };
 		CEA6B3721C3F6BD700312307 /* CurrentLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = CEA6B3711C3F6BD700312307 /* CurrentLocation.gpx */; };
 		CEA6B3741C407FDD00312307 /* btnok.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA6B3731C407FDD00312307 /* btnok.png */; };
 /* End PBXBuildFile section */
@@ -40,6 +47,20 @@
 		0BA2DCBE1C32142F0094A5F9 /* GenderViolenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenderViolenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA2DCC31C32142F0094A5F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BA2DCC41C32142F0094A5F9 /* GenderViolenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViolenceTests.swift; sourceTree = "<group>"; };
+		0BC4F3451C40940F009C3C15 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		0BC4F3471C409575009C3C15 /* GenderViolence-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GenderViolence-Bridging-Header.h"; sourceTree = "<group>"; };
+		0BC4F3481C409576009C3C15 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = fmdb/src/fmdb/FMDB.h; sourceTree = "<group>"; };
+		0BC4F3491C409576009C3C15 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = fmdb/src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
+		0BC4F34A1C409576009C3C15 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = fmdb/src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
+		0BC4F34B1C409576009C3C15 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = fmdb/src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		0BC4F34C1C409576009C3C15 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = fmdb/src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		0BC4F34D1C409576009C3C15 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = fmdb/src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
+		0BC4F34E1C409576009C3C15 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = fmdb/src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
+		0BC4F34F1C409576009C3C15 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = fmdb/src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		0BC4F3501C409576009C3C15 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = fmdb/src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		0BC4F3511C409576009C3C15 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = fmdb/src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
+		0BC4F3521C409576009C3C15 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = fmdb/src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
+		0BC4F35B1C409EBE009C3C15 /* ReportViolence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViolence.swift; sourceTree = "<group>"; };
 		CEA6B3711C3F6BD700312307 /* CurrentLocation.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CurrentLocation.gpx; sourceTree = "<group>"; };
 		CEA6B3731C407FDD00312307 /* btnok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btnok.png; path = GenderViolence/btnok.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BC4F3461C40940F009C3C15 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +87,7 @@
 		0BA2DCA01C32142F0094A5F9 = {
 			isa = PBXGroup;
 			children = (
+				0BC4F3451C40940F009C3C15 /* libsqlite3.dylib */,
 				CEA6B3731C407FDD00312307 /* btnok.png */,
 				CEA6B3711C3F6BD700312307 /* CurrentLocation.gpx */,
 				0BA2DCAB1C32142F0094A5F9 /* GenderViolence */,
@@ -85,6 +108,7 @@
 		0BA2DCAB1C32142F0094A5F9 /* GenderViolence */ = {
 			isa = PBXGroup;
 			children = (
+				0BC4F3581C409DBC009C3C15 /* Database Utils */,
 				0BA2DCAE1C32142F0094A5F9 /* AppDelegate.swift */,
 				0BA2DCB01C32142F0094A5F9 /* ViewController.swift */,
 				0BA2DCB21C32142F0094A5F9 /* Main.storyboard */,
@@ -92,6 +116,8 @@
 				0BA2DCB71C32142F0094A5F9 /* LaunchScreen.xib */,
 				0BA2DCAC1C32142F0094A5F9 /* Supporting Files */,
 				0B859C061C39F77500AEA029 /* RepViolViewController.swift */,
+				0BC4F3471C409575009C3C15 /* GenderViolence-Bridging-Header.h */,
+				0BC4F35B1C409EBE009C3C15 /* ReportViolence.swift */,
 			);
 			path = GenderViolence;
 			sourceTree = "<group>";
@@ -119,6 +145,24 @@
 				0BA2DCC31C32142F0094A5F9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0BC4F3581C409DBC009C3C15 /* Database Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0BC4F3481C409576009C3C15 /* FMDB.h */,
+				0BC4F3491C409576009C3C15 /* FMDatabase.h */,
+				0BC4F34A1C409576009C3C15 /* FMDatabase.m */,
+				0BC4F34B1C409576009C3C15 /* FMResultSet.h */,
+				0BC4F34C1C409576009C3C15 /* FMResultSet.m */,
+				0BC4F34D1C409576009C3C15 /* FMDatabaseQueue.h */,
+				0BC4F34E1C409576009C3C15 /* FMDatabaseQueue.m */,
+				0BC4F34F1C409576009C3C15 /* FMDatabaseAdditions.h */,
+				0BC4F3501C409576009C3C15 /* FMDatabaseAdditions.m */,
+				0BC4F3511C409576009C3C15 /* FMDatabasePool.h */,
+				0BC4F3521C409576009C3C15 /* FMDatabasePool.m */,
+			);
+			name = "Database Utils";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,9 +267,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BC4F35C1C409EBE009C3C15 /* ReportViolence.swift in Sources */,
 				0BA2DCB11C32142F0094A5F9 /* ViewController.swift in Sources */,
 				0BA2DCAF1C32142F0094A5F9 /* AppDelegate.swift in Sources */,
 				0B859C071C39F77500AEA029 /* RepViolViewController.swift in Sources */,
+				0BC4F3531C409576009C3C15 /* FMDatabase.m in Sources */,
+				0BC4F3541C409576009C3C15 /* FMResultSet.m in Sources */,
+				0BC4F3571C409576009C3C15 /* FMDatabasePool.m in Sources */,
+				0BC4F3561C409576009C3C15 /* FMDatabaseAdditions.m in Sources */,
+				0BC4F3551C409576009C3C15 /* FMDatabaseQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,10 +404,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = GenderViolence/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GenderViolence/GenderViolence-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -365,10 +418,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = GenderViolence/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GenderViolence/GenderViolence-Bridging-Header.h";
 			};
 			name = Release;
 		};

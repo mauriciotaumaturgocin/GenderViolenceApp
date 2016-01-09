@@ -47,7 +47,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [AnyObject]) {
         var locValue:CLLocationCoordinate2D = manager.location.coordinate
         //print("locations = \(locValue.latitude) \(locValue.longitude)")
         let currentLocation = CLLocation(latitude: locValue.latitude, longitude: locValue.longitude)
@@ -57,7 +57,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func onRefreshClick(sender: AnyObject) {
         
         centerMapOnLocation()
-        var btn_refresh: UIButton = sender as UIButton;
+        var btn_refresh: UIButton = sender as! UIButton;
         
     }
 
