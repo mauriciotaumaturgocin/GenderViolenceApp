@@ -22,6 +22,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         centerMapOnLocation()
         
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        
         // Ask for Authorisation from the User.
         self.locationManager.requestAlwaysAuthorization()
         
@@ -47,8 +49,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [AnyObject]) {
-        var locValue:CLLocationCoordinate2D = manager.location.coordinate
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
         //print("locations = \(locValue.latitude) \(locValue.longitude)")
         let currentLocation = CLLocation(latitude: locValue.latitude, longitude: locValue.longitude)
         
@@ -57,7 +59,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func onRefreshClick(sender: AnyObject) {
         
         centerMapOnLocation()
-        var btn_refresh: UIButton = sender as! UIButton;
         
     }
 

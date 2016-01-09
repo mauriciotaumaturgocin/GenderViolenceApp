@@ -56,21 +56,23 @@ class RepViolViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         //Creating database file and table
         let filemgr = NSFileManager.defaultManager()
         let dirPaths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
-        let docsDir = dirPaths[0] as! String
-        databasePath = docsDir.stringByAppendingPathComponent("reports.db")
+        let docsDir = dirPaths[0] as String
+        
+        databasePath = (docsDir as NSString).stringByAppendingPathComponent("reports.sqlite")
+        
         if !filemgr.fileExistsAtPath(databasePath as String) {
             let reportsDB = FMDatabase(path: databasePath as String)
             if reportsDB == nil {
-                println("Error: \(reportsDB.lastErrorMessage())")
+                print("Error: \(reportsDB.lastErrorMessage())")
             }
             if reportsDB.open() {
                 let sql_stmt = "CREATE TABLE IF NOT EXISTS REPORTS (ID INTEGER PRIMARY KEY AUTOINCREMENT, ZIPCODE TEXT, STATE TEXT, CITY TEXT, STREET TEXT, VIOLENCE_TYPE TEXT, IS_VICTIM TEXT, IS_DOMESTIC_VIOLENCE TEXT, GENDER_VICTIM TEXT, VIOLENCE_FREQUENCY TEXT)"
                 if !reportsDB.executeStatements(sql_stmt) {
-                    println("Error: \(reportsDB.lastErrorMessage())")
+                    print("Error: \(reportsDB.lastErrorMessage())")
                 }
                 reportsDB.close()
             } else {
-                println("Error: \(reportsDB.lastErrorMessage())")
+                print("Error: \(reportsDB.lastErrorMessage())")
             }
         }
     }
@@ -109,15 +111,15 @@ class RepViolViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBAction func reportClicked(sender: AnyObject) {
         
-        reportViolence.zipCode = self.zipCodeTextField.text
-        reportViolence.state = self.stateTextField.text
-        reportViolence.city = self.cityTextField.text
-        reportViolence.street = self.streetTextField.text
+        reportViolence.zipCode = self.zipCodeTextField.text!
+        reportViolence.state = self.stateTextField.text!
+        reportViolence.city = self.cityTextField.text!
+        reportViolence.street = self.streetTextField.text!
         reportViolence.violenceType = violenceTypeSegControl.titleForSegmentAtIndex(violenceTypeSegControl.selectedSegmentIndex)!
         reportViolence.isVictim = isVictimSegControl.titleForSegmentAtIndex(isVictimSegControl.selectedSegmentIndex)!
         reportViolence.isDomesticViolence = isDomesticViolenceSegControl.titleForSegmentAtIndex(isDomesticViolenceSegControl.selectedSegmentIndex)!
         
-        var text = pickerViolenceTypeData[pickerViolenceType.selectedRowInComponent(0)]
+        let text = pickerViolenceTypeData[pickerViolenceType.selectedRowInComponent(0)]
         
         reportViolence.violenceGender = text
         reportViolence.violenceFrequency = pickerFrequencyData[pickerViolenceFrequency.selectedRowInComponent(0)]
@@ -141,15 +143,15 @@ class RepViolViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             
             if !result {
                 status = "Failed to add report"
-                println("Error: \(reportsDB.lastErrorMessage())")
+                print("Error: \(reportsDB.lastErrorMessage())")
             } else {
                 status = "Violence Reported"
             }
         } else {
-            println("Error: \(reportsDB.lastErrorMessage())")
+            print("Error: \(reportsDB.lastErrorMessage())")
         }
         
-        print(status)
+        print(status, terminator: "")
     }
     
     

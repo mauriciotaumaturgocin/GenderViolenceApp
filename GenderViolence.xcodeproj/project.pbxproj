@@ -14,15 +14,16 @@
 		0BA2DCB61C32142F0094A5F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BA2DCB51C32142F0094A5F9 /* Images.xcassets */; };
 		0BA2DCB91C32142F0094A5F9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA2DCB71C32142F0094A5F9 /* LaunchScreen.xib */; };
 		0BA2DCC51C32142F0094A5F9 /* GenderViolenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA2DCC41C32142F0094A5F9 /* GenderViolenceTests.swift */; };
-		0BC4F3461C40940F009C3C15 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC4F3451C40940F009C3C15 /* libsqlite3.dylib */; settings = {ATTRIBUTES = (Required, ); }; };
 		0BC4F3531C409576009C3C15 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC4F34A1C409576009C3C15 /* FMDatabase.m */; };
 		0BC4F3541C409576009C3C15 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC4F34C1C409576009C3C15 /* FMResultSet.m */; };
 		0BC4F3551C409576009C3C15 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC4F34E1C409576009C3C15 /* FMDatabaseQueue.m */; };
 		0BC4F3561C409576009C3C15 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC4F3501C409576009C3C15 /* FMDatabaseAdditions.m */; };
 		0BC4F3571C409576009C3C15 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC4F3521C409576009C3C15 /* FMDatabasePool.m */; };
 		0BC4F35C1C409EBE009C3C15 /* ReportViolence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC4F35B1C409EBE009C3C15 /* ReportViolence.swift */; };
+		CE2301A11C416A94004C1AF7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2301A01C416A94004C1AF7 /* libsqlite3.tbd */; };
 		CEA6B3721C3F6BD700312307 /* CurrentLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = CEA6B3711C3F6BD700312307 /* CurrentLocation.gpx */; };
 		CEA6B3741C407FDD00312307 /* btnok.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA6B3731C407FDD00312307 /* btnok.png */; };
+		CEA6B3841C40C5AA00312307 /* reportButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA6B3831C40C5AA00312307 /* reportButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +48,6 @@
 		0BA2DCBE1C32142F0094A5F9 /* GenderViolenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenderViolenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA2DCC31C32142F0094A5F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BA2DCC41C32142F0094A5F9 /* GenderViolenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViolenceTests.swift; sourceTree = "<group>"; };
-		0BC4F3451C40940F009C3C15 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		0BC4F3471C409575009C3C15 /* GenderViolence-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GenderViolence-Bridging-Header.h"; sourceTree = "<group>"; };
 		0BC4F3481C409576009C3C15 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = fmdb/src/fmdb/FMDB.h; sourceTree = "<group>"; };
 		0BC4F3491C409576009C3C15 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = fmdb/src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
@@ -61,8 +61,10 @@
 		0BC4F3511C409576009C3C15 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = fmdb/src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
 		0BC4F3521C409576009C3C15 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = fmdb/src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
 		0BC4F35B1C409EBE009C3C15 /* ReportViolence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViolence.swift; sourceTree = "<group>"; };
+		CE2301A01C416A94004C1AF7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		CEA6B3711C3F6BD700312307 /* CurrentLocation.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CurrentLocation.gpx; sourceTree = "<group>"; };
 		CEA6B3731C407FDD00312307 /* btnok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btnok.png; path = GenderViolence/btnok.png; sourceTree = "<group>"; };
+		CEA6B3831C40C5AA00312307 /* reportButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reportButton.png; path = GenderViolence/reportButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BC4F3461C40940F009C3C15 /* libsqlite3.dylib in Frameworks */,
+				CE2301A11C416A94004C1AF7 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,7 +89,8 @@
 		0BA2DCA01C32142F0094A5F9 = {
 			isa = PBXGroup;
 			children = (
-				0BC4F3451C40940F009C3C15 /* libsqlite3.dylib */,
+				CE2301A01C416A94004C1AF7 /* libsqlite3.tbd */,
+				CEA6B3831C40C5AA00312307 /* reportButton.png */,
 				CEA6B3731C407FDD00312307 /* btnok.png */,
 				CEA6B3711C3F6BD700312307 /* CurrentLocation.gpx */,
 				0BA2DCAB1C32142F0094A5F9 /* GenderViolence */,
@@ -209,6 +212,8 @@
 		0BA2DCA11C32142F0094A5F9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Mauricio Oliveira";
 				TargetAttributes = {
@@ -248,6 +253,7 @@
 				CEA6B3721C3F6BD700312307 /* CurrentLocation.gpx in Resources */,
 				0BA2DCB41C32142F0094A5F9 /* Main.storyboard in Resources */,
 				0BA2DCB91C32142F0094A5F9 /* LaunchScreen.xib in Resources */,
+				CEA6B3841C40C5AA00312307 /* reportButton.png in Resources */,
 				0BA2DCB61C32142F0094A5F9 /* Images.xcassets in Resources */,
 				CEA6B3741C407FDD00312307 /* btnok.png in Resources */,
 			);
@@ -406,7 +412,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = GenderViolence/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GenderViolence/GenderViolence-Bridging-Header.h";
@@ -420,7 +426,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = GenderViolence/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GenderViolence/GenderViolence-Bridging-Header.h";
