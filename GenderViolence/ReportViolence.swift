@@ -37,8 +37,8 @@ class ReportViolence {
         get{
             return _state
         }
-        set (street){
-            _street = street
+        set (state){
+            _state = state
         }
     }
     

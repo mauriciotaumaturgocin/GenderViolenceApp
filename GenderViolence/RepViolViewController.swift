@@ -56,7 +56,7 @@ class RepViolViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         //Creating database file and table
         let filemgr = NSFileManager.defaultManager()
         let dirPaths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
-        let docsDir = dirPaths[0] as String
+        let docsDir = dirPaths[0] as! String
         
         databasePath = (docsDir as NSString).stringByAppendingPathComponent("reports.sqlite")
         
@@ -126,8 +126,10 @@ class RepViolViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         
         insertIntoTable(reportViolence)
         
-        //print(reportViolence.zipCode)
-        //print(reportViolence.violenceType)
+        let mainScreen:ViewController = ViewController()
+  
+        self.dismissViewControllerAnimated(true, completion: {})
+        
     }
     
     func insertIntoTable(report: ReportViolence){
@@ -151,7 +153,7 @@ class RepViolViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             print("Error: \(reportsDB.lastErrorMessage())")
         }
         
-        print(status, terminator: "")
+        print(status)
     }
     
     

@@ -16,9 +16,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
     
+    var databasePath = NSString()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let dirPaths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let docsDir = dirPaths[0] as! String
+        databasePath = (docsDir as NSString).stringByAppendingPathComponent("reports.sqlite")
         
         centerMapOnLocation()
         
@@ -35,6 +41,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
         }
+        
     }
     
     let regionRadius: CLLocationDistance = 1000
@@ -49,16 +56,56 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [AnyObject]) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
         //print("locations = \(locValue.latitude) \(locValue.longitude)")
         let currentLocation = CLLocation(latitude: locValue.latitude, longitude: locValue.longitude)
         
     }
     
+    override func viewWillAppear(animated: Bool) {
+        //Get all reports and insert pins.
+        getAllReports()
+    }
+    
     @IBAction func onRefreshClick(sender: AnyObject) {
         
         centerMapOnLocation()
+        
+    }
+    
+    //Returns zipcode, state, city and street from all reports
+    func getAllReports()-> [ReportViolence]{
+        
+        var reports = [ReportViolence]()
+        
+        var status = ""
+        let reportsDB = FMDatabase(path: databasePath as String)
+        
+        if reportsDB.open() {
+            let querySQL = "SELECT ZIPCODE, STATE, CITY, STREET FROM REPORTS WHERE ZIPCODE != ''"
+            
+            let results:FMResultSet? = reportsDB.executeQuery(querySQL,
+                withArgumentsInArray: nil)
+            
+            while results?.next() == true {
+                var report = ReportViolence()
+                report.zipCode = results!.stringForColumn("ZIPCODE")
+                report.state = results!.stringForColumn("STATE")
+                report.city = results!.stringForColumn("CITY")
+                report.street = results!.stringForColumn("STREET")
+                println(report.zipCode + "|" + report.state + "|" + report.city + "|" + report.street)
+                status = "Record Found"
+                reports.append(report)
+            }
+
+            print(status)
+            reportsDB.close()
+        } else {
+            println("Error: \(reportsDB.lastErrorMessage())")
+        }
+
+        return reports;
         
     }
 
