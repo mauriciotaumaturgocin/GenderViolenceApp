@@ -23,10 +23,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         
         let dirPaths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
-        let docsDir = dirPaths[0] as! String
+        let docsDir = dirPaths[0] as String
         databasePath = (docsDir as NSString).stringByAppendingPathComponent("reports.sqlite")
         
-        centerMapOnLocation()
+        let currentLocation = CLLocation(latitude: -8.055474, longitude: -34.951216)
+        centerMapOnLocation(currentLocation)
         
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         
@@ -46,21 +47,36 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     let regionRadius: CLLocationDistance = 1000
     
-    func centerMapOnLocation() {
-        
-        let currentLocation = CLLocation(latitude: -8.055474, longitude: -34.951216)
-        
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(currentLocation.coordinate,
+    func centerMapOnLocation(location : CLLocation) {
+
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
             regionRadius * 2.0, regionRadius * 2.0)
         
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [AnyObject]) {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
         //print("locations = \(locValue.latitude) \(locValue.longitude)")
         let currentLocation = CLLocation(latitude: locValue.latitude, longitude: locValue.longitude)
         
+    }
+    
+    func plotPin(address : String)
+    {
+        let geocoder = CLGeocoder()
+        
+        geocoder.geocodeAddressString(address, completionHandler: {(placemarks, error) -> Void in
+            if((error) != nil){
+                print("Error", error)
+            }
+            if let placemark = placemarks?.first {
+                let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
+                self.centerMapOnLocation(CLLocation(latitude: coordinates.latitude, longitude: coordinates.longitude))
+                self.mapView.addAnnotation(MKPlacemark(placemark: placemark))
+            }
+        })
+
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -70,7 +86,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func onRefreshClick(sender: AnyObject) {
         
-        centerMapOnLocation()
+        let currentLocation = CLLocation(latitude: -8.055474, longitude: -34.951216)
+        centerMapOnLocation(currentLocation)
         
     }
     
@@ -94,15 +111,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 report.state = results!.stringForColumn("STATE")
                 report.city = results!.stringForColumn("CITY")
                 report.street = results!.stringForColumn("STREET")
-                println(report.zipCode + "|" + report.state + "|" + report.city + "|" + report.street)
+                print(report.zipCode + "|" + report.state + "|" + report.city + "|" + report.street)
                 status = "Record Found"
                 reports.append(report)
+                plotPin(report.street + ", " + report.state + ", " + "BRA")
             }
 
             print(status)
             reportsDB.close()
         } else {
-            println("Error: \(reportsDB.lastErrorMessage())")
+            print("Error: \(reportsDB.lastErrorMessage())")
         }
 
         return reports;
