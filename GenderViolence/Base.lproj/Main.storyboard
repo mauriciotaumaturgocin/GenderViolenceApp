@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -84,111 +84,9 @@
             </objects>
             <point key="canvasLocation" x="346" y="-584"/>
         </scene>
-        <!--My Lacation Report-->
-        <scene sceneID="FSm-rS-WAu">
-            <objects>
-                <viewController id="Pzb-Pi-6pJ" customClass="MyLacationReport" customModule="GenderViolence" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wfU-Mn-evr"/>
-                        <viewControllerLayoutGuide type="bottom" id="Yob-Dh-Y2a"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vA3-4z-nmb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type of Violence" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URT-p0-cYz">
-                                <rect key="frame" x="14" y="77" width="128" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="apn-j5-iJI">
-                                <rect key="frame" x="14" y="106" width="129" height="29"/>
-                                <segments>
-                                    <segment title="Physical"/>
-                                    <segment title="Verbal"/>
-                                </segments>
-                            </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are you the victim?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPv-tt-R3C">
-                                <rect key="frame" x="14" y="142" width="147" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Aed-kN-Vfp">
-                                <rect key="frame" x="14" y="171" width="73" height="29"/>
-                                <segments>
-                                    <segment title="Yes"/>
-                                    <segment title="No"/>
-                                </segments>
-                            </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select the gender of the victim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huN-U1-AUa">
-                                <rect key="frame" x="14" y="267" width="236" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8a2-wv-Dfj">
-                                <rect key="frame" x="14" y="291" width="176" height="119"/>
-                            </pickerView>
-                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cBQ-eX-RGL">
-                                <rect key="frame" x="14" y="441" width="176" height="119"/>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How frequently have you been seen it?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJf-vc-n0G">
-                                <rect key="frame" x="14" y="418" width="296" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Is it domestic Violence?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZA-9y-Xd2">
-                                <rect key="frame" x="14" y="207" width="181" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cfh-i1-tvd">
-                                <rect key="frame" x="14" y="234" width="73" height="29"/>
-                                <segments>
-                                    <segment title="Yes"/>
-                                    <segment title="No"/>
-                                </segments>
-                            </segmentedControl>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HrR-2k-UyR">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="Report Violence" id="VaL-Xo-foD">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="joi-pI-wZC">
-                                            <connections>
-                                                <segue destination="BYZ-38-t0r" kind="modal" id="CNs-Gr-051"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Report" id="eIH-HO-Gxa">
-                                            <connections>
-                                                <action selector="reportClicked:" destination="Pzb-Pi-6pJ" id="cmi-xa-7p2"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="isDomesticViolenceSegControl" destination="cfh-i1-tvd" id="Ijs-vN-csa"/>
-                        <outlet property="isVictimSegControl" destination="Aed-kN-Vfp" id="Cd5-un-NLc"/>
-                        <outlet property="pickerViolenceFrequency" destination="cBQ-eX-RGL" id="4JY-HE-x1L"/>
-                        <outlet property="pickerViolenceGender" destination="8a2-wv-Dfj" id="tqE-L4-Xjy"/>
-                        <outlet property="violenceTypeSegControl" destination="apn-j5-iJI" id="HcJ-Yr-Le6"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Nwm-nY-qhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="247" y="-822"/>
-        </scene>
         <!--Report Violence-->
         <scene sceneID="cgH-al-mQ7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zkb-A6-DBg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Report Violence" automaticallyAdjustsScrollViewInsets="NO" id="6Ql-H8-y8I" customClass="RepViolViewController" customModule="GenderViolence" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tHB-Qc-MKo"/>
@@ -410,13 +308,13 @@
                         <outlet property="violenceTypeSegControl" destination="Gej-6U-01j" id="VWB-Go-nno"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zkb-A6-DBg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-298" y="-221"/>
         </scene>
         <!--Report Other Location-->
         <scene sceneID="DWS-1j-HyY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t7k-GB-XH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Report Other Location" automaticallyAdjustsScrollViewInsets="NO" id="apd-6e-FiA" customClass="RepOtherViolenceVC" customModule="GenderViolence" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uhw-Gd-5Li"/>
@@ -528,6 +426,7 @@
                         <outlet property="violenceTypeSegControl" destination="Kml-H1-MYs" id="cAD-bw-jUv"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t7k-GB-XH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="844" y="-157"/>
         </scene>
@@ -538,6 +437,6 @@
         <image name="reportButton2.png" width="107" height="104"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CNs-Gr-051"/>
+        <segue reference="vjX-H4-Rjm"/>
     </inferredMetricsTieBreakers>
 </document>
