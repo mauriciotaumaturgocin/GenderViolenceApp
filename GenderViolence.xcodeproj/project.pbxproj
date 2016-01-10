@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B107C061C4171F4005AB44E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B107C051C4171F4005AB44E /* libsqlite3.dylib */; };
+		0B0AE6721C42003A00F1D997 /* MyLocationReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0AE6711C42003A00F1D997 /* MyLocationReport.swift */; };
 		0B859C071C39F77500AEA029 /* RepViolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B859C061C39F77500AEA029 /* RepViolViewController.swift */; };
 		0BA2DCAF1C32142F0094A5F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA2DCAE1C32142F0094A5F9 /* AppDelegate.swift */; };
 		0BA2DCB11C32142F0094A5F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA2DCB01C32142F0094A5F9 /* ViewController.swift */; };
@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B107C051C4171F4005AB44E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		0B0AE6711C42003A00F1D997 /* MyLocationReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLocationReport.swift; sourceTree = "<group>"; };
 		0B859C061C39F77500AEA029 /* RepViolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepViolViewController.swift; sourceTree = "<group>"; };
 		0BA2DCA91C32142F0094A5F9 /* GenderViolence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenderViolence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA2DCAD1C32142F0094A5F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,7 +75,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE2301A31C41AB95004C1AF7 /* libsqlite3.tbd in Frameworks */,
-				0B107C061C4171F4005AB44E /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				CE2301A21C41AB95004C1AF7 /* libsqlite3.tbd */,
-				0B107C051C4171F4005AB44E /* libsqlite3.dylib */,
 				CEA6B3831C40C5AA00312307 /* reportButton.png */,
 				CEA6B3731C407FDD00312307 /* btnok.png */,
 				CEA6B3711C3F6BD700312307 /* CurrentLocation.gpx */,
@@ -125,6 +123,7 @@
 				0B859C061C39F77500AEA029 /* RepViolViewController.swift */,
 				0BC4F3471C409575009C3C15 /* GenderViolence-Bridging-Header.h */,
 				0BC4F35B1C409EBE009C3C15 /* ReportViolence.swift */,
+				0B0AE6711C42003A00F1D997 /* MyLocationReport.swift */,
 			);
 			path = GenderViolence;
 			sourceTree = "<group>";
@@ -283,6 +282,7 @@
 				0B859C071C39F77500AEA029 /* RepViolViewController.swift in Sources */,
 				0BC4F3531C409576009C3C15 /* FMDatabase.m in Sources */,
 				0BC4F3541C409576009C3C15 /* FMResultSet.m in Sources */,
+				0B0AE6721C42003A00F1D997 /* MyLocationReport.swift in Sources */,
 				0BC4F3571C409576009C3C15 /* FMDatabasePool.m in Sources */,
 				0BC4F3561C409576009C3C15 /* FMDatabaseAdditions.m in Sources */,
 				0BC4F3551C409576009C3C15 /* FMDatabaseQueue.m in Sources */,
