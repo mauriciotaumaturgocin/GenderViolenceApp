@@ -8,15 +8,8 @@
 
 import UIKit
 
-class RepViolViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class RepOtherViolenceVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    @IBOutlet weak var zipCodeTextField: UITextField!
-    
-    @IBOutlet weak var stateTextField: UITextField!
-    
-    @IBOutlet weak var cityTextField: UITextField!
-    
-    @IBOutlet weak var streetTextField: UITextField!
     
     @IBOutlet weak var violenceTypeSegControl: UISegmentedControl!
     
@@ -37,7 +30,7 @@ class RepViolViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         //Creating PickerView options
         pickerViolenceTypeData = ["Man", "Woman", "Transgender"]
         pickerFrequencyData = ["First time", "2 to 4 times a week", "5 or more times a week"]
@@ -111,10 +104,12 @@ class RepViolViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBAction func reportClicked(sender: AnyObject) {
         
+        reportViolence.zipCode = "12345"
+        reportViolence.state = "Pernambuco"
+        reportViolence.city = "Recife"
+        reportViolence.street = "423-803 Avenida Jornalista Aníbal Fernandes"
 
-        reportViolence.state = self.stateTextField.text!
-        reportViolence.city = self.cityTextField.text!
-        reportViolence.street = self.streetTextField.text!
+        
         reportViolence.violenceType = violenceTypeSegControl.titleForSegmentAtIndex(violenceTypeSegControl.selectedSegmentIndex)!
         reportViolence.isVictim = isVictimSegControl.titleForSegmentAtIndex(isVictimSegControl.selectedSegmentIndex)!
         reportViolence.isDomesticViolence = isDomesticViolenceSegControl.titleForSegmentAtIndex(isDomesticViolenceSegControl.selectedSegmentIndex)!
@@ -127,7 +122,7 @@ class RepViolViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         insertIntoTable(reportViolence)
         
         let mainScreen:ViewController = ViewController()
-  
+        
         self.dismissViewControllerAnimated(true, completion: {})
         
     }
