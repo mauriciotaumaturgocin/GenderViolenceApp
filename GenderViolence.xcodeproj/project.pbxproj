@@ -22,6 +22,8 @@
 		0BC4F3571C409576009C3C15 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC4F3521C409576009C3C15 /* FMDatabasePool.m */; };
 		0BC4F35C1C409EBE009C3C15 /* ReportViolence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC4F35B1C409EBE009C3C15 /* ReportViolence.swift */; };
 		CE2301A31C41AB95004C1AF7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2301A21C41AB95004C1AF7 /* libsqlite3.tbd */; };
+		CE2301A51C41C194004C1AF7 /* reportButton2.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2301A41C41C194004C1AF7 /* reportButton2.png */; };
+		CE2301A71C41CED4004C1AF7 /* RepOtherViolenceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2301A61C41CED4004C1AF7 /* RepOtherViolenceVC.swift */; };
 		CEA6B3721C3F6BD700312307 /* CurrentLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = CEA6B3711C3F6BD700312307 /* CurrentLocation.gpx */; };
 		CEA6B3741C407FDD00312307 /* btnok.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA6B3731C407FDD00312307 /* btnok.png */; };
 		CEA6B3841C40C5AA00312307 /* reportButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA6B3831C40C5AA00312307 /* reportButton.png */; };
@@ -64,6 +66,8 @@
 		0BC4F3521C409576009C3C15 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = fmdb/src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
 		0BC4F35B1C409EBE009C3C15 /* ReportViolence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViolence.swift; sourceTree = "<group>"; };
 		CE2301A21C41AB95004C1AF7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		CE2301A41C41C194004C1AF7 /* reportButton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reportButton2.png; path = GenderViolence/reportButton2.png; sourceTree = "<group>"; };
+		CE2301A61C41CED4004C1AF7 /* RepOtherViolenceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepOtherViolenceVC.swift; sourceTree = "<group>"; };
 		CEA6B3711C3F6BD700312307 /* CurrentLocation.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CurrentLocation.gpx; sourceTree = "<group>"; };
 		CEA6B3731C407FDD00312307 /* btnok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btnok.png; path = GenderViolence/btnok.png; sourceTree = "<group>"; };
 		CEA6B3831C40C5AA00312307 /* reportButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reportButton.png; path = GenderViolence/reportButton.png; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 		0BA2DCA01C32142F0094A5F9 = {
 			isa = PBXGroup;
 			children = (
+				CE2301A41C41C194004C1AF7 /* reportButton2.png */,
 				CE2301A21C41AB95004C1AF7 /* libsqlite3.tbd */,
 				CEA6B3831C40C5AA00312307 /* reportButton.png */,
 				CEA6B3731C407FDD00312307 /* btnok.png */,
@@ -256,6 +261,7 @@
 				CEA6B3721C3F6BD700312307 /* CurrentLocation.gpx in Resources */,
 				0BA2DCB41C32142F0094A5F9 /* Main.storyboard in Resources */,
 				0BA2DCB91C32142F0094A5F9 /* LaunchScreen.xib in Resources */,
+				CE2301A51C41C194004C1AF7 /* reportButton2.png in Resources */,
 				CEA6B3841C40C5AA00312307 /* reportButton.png in Resources */,
 				0BA2DCB61C32142F0094A5F9 /* Images.xcassets in Resources */,
 				CEA6B3741C407FDD00312307 /* btnok.png in Resources */,
@@ -285,6 +291,7 @@
 				0B0AE6721C42003A00F1D997 /* MyLocationReport.swift in Sources */,
 				0BC4F3571C409576009C3C15 /* FMDatabasePool.m in Sources */,
 				0BC4F3561C409576009C3C15 /* FMDatabaseAdditions.m in Sources */,
+				CE2301A71C41CED4004C1AF7 /* RepOtherViolenceVC.swift in Sources */,
 				0BC4F3551C409576009C3C15 /* FMDatabaseQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

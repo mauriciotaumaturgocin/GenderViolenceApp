@@ -12,6 +12,7 @@ import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
+    @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var mapView: MKMapView!
     
     let locationManager = CLLocationManager()
@@ -58,7 +59,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
         //print("locations = \(locValue.latitude) \(locValue.longitude)")
-        let currentLocation = CLLocation(latitude: locValue.latitude, longitude: locValue.longitude)
+        //let currentLocation = CLLocation(latitude: locValue.latitude, longitude: locValue.longitude)
         
     }
     
@@ -117,6 +118,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 plotPin(report.street + ", " + report.state + ", " + "BRA")
             }
 
+            let currentLocation = CLLocation(latitude: -8.055474, longitude: -34.951216)
+            centerMapOnLocation(currentLocation)
+            
             print(status)
             reportsDB.close()
         } else {
