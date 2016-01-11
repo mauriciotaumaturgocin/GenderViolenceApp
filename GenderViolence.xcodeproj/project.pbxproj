@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B10CE7E1C4350F0003C9484 /* gender.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0B10CE7D1C4350F0003C9484 /* gender.jpg */; };
 		0B859C071C39F77500AEA029 /* RepViolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B859C061C39F77500AEA029 /* RepViolViewController.swift */; };
 		0BA2DCAF1C32142F0094A5F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA2DCAE1C32142F0094A5F9 /* AppDelegate.swift */; };
 		0BA2DCB11C32142F0094A5F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA2DCB01C32142F0094A5F9 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B10CE7D1C4350F0003C9484 /* gender.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = gender.jpg; path = GenderViolence/gender.jpg; sourceTree = "<group>"; };
 		0B859C061C39F77500AEA029 /* RepViolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepViolViewController.swift; sourceTree = "<group>"; };
 		0BA2DCA91C32142F0094A5F9 /* GenderViolence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenderViolence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA2DCAD1C32142F0094A5F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		0BA2DCA01C32142F0094A5F9 = {
 			isa = PBXGroup;
 			children = (
+				0B10CE7D1C4350F0003C9484 /* gender.jpg */,
 				CE2301A41C41C194004C1AF7 /* reportButton2.png */,
 				CE2301A21C41AB95004C1AF7 /* libsqlite3.tbd */,
 				CEA6B3831C40C5AA00312307 /* reportButton.png */,
@@ -262,6 +265,7 @@
 				CE2301A51C41C194004C1AF7 /* reportButton2.png in Resources */,
 				CEA6B3841C40C5AA00312307 /* reportButton.png in Resources */,
 				0BA2DCB61C32142F0094A5F9 /* Images.xcassets in Resources */,
+				0B10CE7E1C4350F0003C9484 /* gender.jpg in Resources */,
 				CEA6B3741C407FDD00312307 /* btnok.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
